@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/michelp/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: db0e8a6e0370c9447ea128ca26e27f5df4a9d711c4c3037c661f0ef451ba01ea
+  sha256: 6bf0639dcf3ea05e4bd873e2e867794a922a672a6586f4e4a36460ed5bcd1b6c
 
 build:
   skip: true  # [win or py<37]
