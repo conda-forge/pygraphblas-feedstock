@@ -5,9 +5,11 @@ Home: https://github.com/michelp/pygraphblas
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pygraphblas-feedstock/blob/master/LICENSE.txt)
 
 Summary: GraphBLAS for Python
+
+Development: https://github.com/michelp/pygraphblas
 
 pygraphblas is a Python wrapper around the GraphBLAS API.
 
