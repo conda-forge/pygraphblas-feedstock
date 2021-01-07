@@ -1,18 +1,18 @@
 {% set name = "pygraphblas" %}
-{% set version = "3.4.0" %}
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/michelp/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: db0e8a6e0370c9447ea128ca26e27f5df4a9d711c4c3037c661f0ef451ba01ea
+  url: https://github.com/michelp/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: 6bf0639dcf3ea05e4bd873e2e867794a922a672a6586f4e4a36460ed5bcd1b6c
 
 build:
   skip: true  # [win or py<37]
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -40,7 +40,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'GraphBLAS for Python'
+  summary: GraphBLAS for Python
   description: |
     pygraphblas is a Python wrapper around the GraphBLAS API.
   dev_url: https://github.com/michelp/pygraphblas
