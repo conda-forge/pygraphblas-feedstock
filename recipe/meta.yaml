@@ -12,7 +12,7 @@ source:
 build:
   skip: true  # [win or py<37]
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -40,7 +40,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'GraphBLAS for Python'
+  summary: GraphBLAS for Python
   description: |
     pygraphblas is a Python wrapper around the GraphBLAS API.
   dev_url: https://github.com/michelp/pygraphblas
