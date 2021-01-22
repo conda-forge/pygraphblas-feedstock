@@ -1,5 +1,5 @@
 {% set name = "pygraphblas" %}
-{% set version = "v4.0.0" %}
+{% set version = "v4.1.0" %}
 
 package:
   name: {{ name|lower }}
