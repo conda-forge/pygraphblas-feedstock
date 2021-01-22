@@ -1,12 +1,12 @@
 {% set name = "pygraphblas" %}
-{% set version = "v4.1.0" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/michelp/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://github.com/michelp/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: cc7e2e494ff7cea12039892c3ccd5da40413c94b742794a1b52e29207476ece2
 
 build:
@@ -38,7 +38,7 @@ test:
   imports:
     - pygraphblas
   commands:
-    - python -c "from pygraphblas import GxB_IMPLEMENTATION ; assert GxB_IMPLEMENTATION == (4,0,3)"
+    - python -c "from pygraphblas import GxB_SPEC ; assert GxB_SPEC == (1, 3, 0)"
 
 about:
   home: https://github.com/michelp/pygraphblas
