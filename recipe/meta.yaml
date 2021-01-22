@@ -38,7 +38,7 @@ test:
   imports:
     - pygraphblas
   commands:
-    - python -c "from pygraphblas import GxB_IMPLEMENTATION ; assert GxB_IMPLEMENTATION == (4,0,1)"
+    - python -c "from pygraphblas import GxB_IMPLEMENTATION ; assert GxB_IMPLEMENTATION == (4,0,3)"
 
 about:
   home: https://github.com/michelp/pygraphblas
