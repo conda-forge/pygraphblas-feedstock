@@ -28,12 +28,17 @@ requirements:
     - python
     - cffi
     - numba
+    - scipy
+    - pillow
+    - python-graphviz
+    - contextvars
+    - matplotlib
 
 test:
   imports:
     - pygraphblas
   commands:
-    - python -c "from pygraphblas import Vector, INT64 ; v = Vector.sparse(INT64, 10) ; assert v.size == 10"
+    - python -c "from pygraphblas import GxB_SPEC ; assert GxB_SPEC == (1, 3, 0)"
 
 about:
   home: https://github.com/michelp/pygraphblas
