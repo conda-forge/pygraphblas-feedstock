@@ -28,6 +28,11 @@ requirements:
     - python
     - cffi
     - numba
+    - scipy
+    - pillow
+    - python-graphviz
+    - contextvars
+    - matplotlib
 
 test:
   imports:
