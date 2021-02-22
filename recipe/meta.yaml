@@ -1,5 +1,5 @@
 {% set name = "pygraphblas" %}
-{% set version = "4.1.0" %}
+{% set version = "4.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/michelp/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: cc7e2e494ff7cea12039892c3ccd5da40413c94b742794a1b52e29207476ece2
+  sha256: c1a600e15ac4415a3692ce7f0540d9c3f9c440179fbd1341d90c99dc4c8a1a79
 
 build:
   skip: true  # [win or py<37]
