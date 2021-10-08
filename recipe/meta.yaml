@@ -21,6 +21,7 @@ requirements:
     - pytest-runner
     - python >=3.7
   run:
+    - contextvars
     - lazy-property
     - mmparse
     - numba
