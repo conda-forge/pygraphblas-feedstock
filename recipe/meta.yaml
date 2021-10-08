@@ -1,49 +1,53 @@
 {% set name = "pygraphblas" %}
-{% set version = "4.1.0" %}
+{% set version = "5.1.8.0" %}
+
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/michelp/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: cc7e2e494ff7cea12039892c3ccd5da40413c94b742794a1b52e29207476ece2
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pygraphblas-{{ version }}.tar.gz
+  sha256: ecd763cf54394ca1d5e37474dcf36b8727ae001df3e3485180e0d94be81b858b
 
 build:
-  skip: true  # [win or py<37]
   number: 0
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - {{ compiler('c') }}
   host:
-    - python
     - pip
-    - setuptools
-    - cffi
-    - graphblas
     - pytest-runner
-  run:
     - python
-    - cffi
+  run:
+    - lazy-property
+    - mmparse
     - numba
+    - numpy <1.21
+    - python
+    - python-suitesparse-graphblas >=5.1.3,<5.2
+    - scipy
+    - ssgetpy
 
 test:
   imports:
     - pygraphblas
   commands:
+    - pip check
     - python -c "from pygraphblas import Vector, INT64 ; v = Vector.sparse(INT64, 10) ; assert v.size == 10"
+  requires:
+    - pip
 
 about:
-  home: https://github.com/michelp/pygraphblas
+  home: https://github.com/Graphegon/pygraphblas
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
   summary: GraphBLAS for Python
   description: |
     pygraphblas is a Python wrapper around the GraphBLAS API.
-  dev_url: https://github.com/michelp/pygraphblas
+  dev_url: https://github.com/Graphegon/pygraphblas
 
 extra:
   recipe-maintainers:
