@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pygraphblas-{{ version }}.tar.gz
-  sha256: ecd763cf54394ca1d5e37474dcf36b8727ae001df3e3485180e0d94be81b858b
+  url: https://github.com/Graphegon/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: 67b9af3e2178433d2294b1095a53825eeb2adf72473cb4808ee60d4f3ad84887
 
 build:
   number: 0
