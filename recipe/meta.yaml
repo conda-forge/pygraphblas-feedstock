@@ -11,7 +11,7 @@ source:
   sha256: 67b9af3e2178433d2294b1095a53825eeb2adf72473cb4808ee60d4f3ad84887
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,18 +19,20 @@ requirements:
   host:
     - pip
     - pytest-runner
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - lazy-property
     - mmparse
     - numba
     - numpy <1.21
-    - python >=3.7
+    - python >={{ python_min }}
     - python-suitesparse-graphblas >=5.1.3,<5.2
     - scipy
     - ssgetpy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pygraphblas
   commands:
